@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Me Descarta Aqui – Descarte consciente em Altinópolis</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#dicas" onclick="closeMobileMenu()">Dicas</a>
+  <a href="#descarte" onclick="closeMobileMenu()">Descarte</a>
+  <a href="#como-funciona" onclick="closeMobileMenu()">Como funciona</a>
+  <a href="#descarte" onclick="closeMobileMenu()" style="color:var(--green-vivid)">Encontrar Local</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">♻️</div>
+    <div class="nav-logo-text">Me Descarta<span> Aqui</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#dicas">Dicas</a></li>
+    <li><a href="#descarte">Descarte</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#descarte" class="nav-cta">Encontrar Local</a></li>
+  </ul>
+  <div class="hamburger" onclick="openMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-city-bg"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-circles">
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">📍 Altinópolis · SP</div>
+    <h1>Descarte certo.<br>Cidade <span class="highlight">mais verde</span>.</h1>
+    <p>Encontre os pontos de coleta adequados para cada tipo de resíduo na sua cidade. Rápido, fácil e responsável.</p>
+    <div class="hero-actions">
+      <a href="#descarte" class="btn-primary">
+        🗺️ Ver pontos de coleta
+      </a>
+      <a href="#dicas" class="btn-secondary">
+        💡 Dicas de descarte
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="float-icon">♻️</div>
+    <div class="float-icon">🔋</div>
+    <div class="float-icon">💊</div>
+    <div class="float-icon">💡</div>
+    <svg class="hero-illustration" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="180" fill="rgba(26,107,69,0.15)" stroke="rgba(45,199,109,0.2)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="130" fill="rgba(26,107,69,0.15)" stroke="rgba(45,199,109,0.2)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="80" fill="rgba(45,199,109,0.12)" stroke="rgba(45,199,109,0.35)" stroke-width="1.5"/>
+      <text x="200" y="215" text-anchor="middle" font-size="60" fill="rgba(45,199,109,0.9)">♻️</text>
+      <circle cx="80" cy="120" r="30" fill="rgba(45,199,109,0.08)" stroke="rgba(45,199,109,0.2)" stroke-width="1"/>
+      <text x="80" y="130" text-anchor="middle" font-size="20">🔋</text>
+      <circle cx="320" cy="100" r="28" fill="rgba(45,199,109,0.08)" stroke="rgba(45,199,109,0.2)" stroke-width="1"/>
+      <text x="320" y="110" text-anchor="middle" font-size="18">💡</text>
+      <circle cx="340" cy="290" r="32" fill="rgba(45,199,109,0.08)" stroke="rgba(45,199,109,0.2)" stroke-width="1"/>
+      <text x="340" y="302" text-anchor="middle" font-size="20">💊</text>
+      <circle cx="70" cy="300" r="26" fill="rgba(45,199,109,0.08)" stroke="rgba(45,199,109,0.2)" stroke-width="1"/>
+      <text x="70" y="310" text-anchor="middle" font-size="18">📱</text>
+    </svg>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>rolar</span>
+  </div>
+</header>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <span class="stat-number">8</span>
+    <span class="stat-label">Categorias de<br>Descarte</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">+20</span>
+    <span class="stat-label">Pontos de<br>Coleta</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Gratuito e<br>Acessível</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">24h</span>
+    <span class="stat-label">Informações<br>Atualizadas</span>
+  </div>
+</div>
+
+<!-- ═══ CAROUSEL / DESCARTE ═══ -->
+<section class="carousel-section" id="descarte">
+  <div class="carousel-header reveal">
+    <div class="section-tag">Guia de descarte</div>
+    <h2 class="section-title">Escolha o tipo de<br>material e descarte certo</h2>
+    <p class="section-subtitle">Selecione uma categoria abaixo para ver dicas específicas e os pontos de coleta em Altinópolis.</p>
+  </div>
+
+  <!-- Category buttons -->
+  <div class="cat-selector">
+    <div class="cat-track-wrapper">
+      <div class="cat-track" id="catTrack">
+        <button class="cat-btn active" data-cat="0" onclick="selectCat(0)">
+          <span class="cat-emoji">🩸</span>
+          <span class="cat-label">Perfuro-<br>cortantes</span>
+        </button>
+        <button class="cat-btn" data-cat="1" onclick="selectCat(1)">
+          <span class="cat-emoji">♻️</span>
+          <span class="cat-label">Reciclado</span>
+        </button>
+        <button class="cat-btn" data-cat="2" onclick="selectCat(2)">
+          <span class="cat-emoji">🗑️</span>
+          <span class="cat-label">Lixo<br>Comum</span>
+        </button>
+        <button class="cat-btn" data-cat="3" onclick="selectCat(3)">
+          <span class="cat-emoji">📱</span>
+          <span class="cat-label">Eletrô-<br>nicos</span>
+        </button>
+        <button class="cat-btn" data-cat="4" onclick="selectCat(4)">
+          <span class="cat-emoji">🔋</span>
+          <span class="cat-label">Baterias<br>e Pilhas</span>
+        </button>
+        <button class="cat-btn" data-cat="5" onclick="selectCat(5)">
+          <span class="cat-emoji">💡</span>
+          <span class="cat-label">Lâmpadas<br>Fluoresc.</span>
+        </button>
+        <button class="cat-btn" data-cat="6" onclick="selectCat(6)">
+          <span class="cat-emoji">💊</span>
+          <span class="cat-label">Remédios</span>
+        </button>
+        <button class="cat-btn" data-cat="7" onclick="selectCat(7)">
+          <span class="cat-emoji">🪨</span>
+          <span class="cat-label">Resíduos<br>Sólidos</span>
+        </button>
+        <button class="cat-btn" data-cat="8" onclick="selectCat(8)">
+          <span class="cat-emoji">🛋️</span>
+          <span class="cat-label">Lixo<br>Volumoso</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content panels -->
+  <div class="content-panels">
+
+    <!-- 0: Perfurocortantes -->
+    <div class="content-panel active" id="panel-0">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">🩸</span>
+            <span class="badge-text">Materiais Perfurocortantes</span>
+          </div>
+          <h2>Agulhas, seringas e objetos cortantes</h2>
+          <p>Materiais que podem perfurar ou cortar necessitam de descarte especial para proteger coletores de lixo, trabalhadores da saúde e o meio ambiente.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter" id="counter">1 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Use coletor de descarte rígido (descartex)</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Jamais reencape agulhas usadas</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Nunca descarte em lixo doméstico</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Procure farmácias ou UBSs da cidade</div>
+      </div>
+
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">📷</span>
+              <span class="img-placeholder-text">Adicionar foto do local</span>
+            </div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 01</h4>
+            <div class="local-card-address">
+              <span class="addr-icon">📌</span>
+              <span>Endereço completo, Bairro – Altinópolis, SP</span>
+            </div>
+            <div class="local-card-hours">
+              <span class="hours-icon">🕐</span>
+              <span>Horário de funcionamento a confirmar</span>
+            </div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">📷</span>
+              <span class="img-placeholder-text">Adicionar foto do local</span>
+            </div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 02</h4>
+            <div class="local-card-address">
+              <span class="addr-icon">📌</span>
+              <span>Endereço completo, Bairro – Altinópolis, SP</span>
+            </div>
+            <div class="local-card-hours">
+              <span class="hours-icon">🕐</span>
+              <span>Horário de funcionamento a confirmar</span>
+            </div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">📷</span>
+              <span class="img-placeholder-text">Adicionar foto do local</span>
+            </div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 03</h4>
+            <div class="local-card-address">
+              <span class="addr-icon">📌</span>
+              <span>Endereço completo, Bairro – Altinópolis, SP</span>
+            </div>
+            <div class="local-card-hours">
+              <span class="hours-icon">🕐</span>
+              <span>Horário de funcionamento a confirmar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1: Reciclado -->
+    <div class="content-panel" id="panel-1">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">♻️</span>
+            <span class="badge-text">Materiais Recicláveis</span>
+          </div>
+          <h2>Papel, plástico, vidro e metal</h2>
+          <p>Materiais recicláveis devidamente separados podem ser transformados em novas matérias-primas, gerando renda e reduzindo o impacto ambiental.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">2 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Limpe e seque antes de descartar</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Separe plástico, papel, vidro e metal</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Embalagens amassadas são aceitas</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Não misture com resíduos orgânicos</div>
+      </div>
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Ecoponto / PEV – Nome 01</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Ecoponto / PEV – Nome 02</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Ecoponto / PEV – Nome 03</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: Lixo Comum -->
+    <div class="content-panel" id="panel-2">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">🗑️</span>
+            <span class="badge-text">Lixo Comum</span>
+          </div>
+          <h2>Resíduos domésticos não recicláveis</h2>
+          <p>Lixo doméstico comum inclui resíduos orgânicos e rejeitos que não têm destinação específica. O descarte adequado evita vetores e doenças.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">3 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Use sacos plásticos resistentes</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Separe orgânicos de rejeitos secos</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Descarte nos dias de coleta</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Não misture com recicláveis</div>
+      </div>
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Coleta Municipal</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Coleta Domiciliar Municipal</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Consultar calendário de coleta por bairro na Prefeitura de Altinópolis</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Verificar dias e horários por região</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 02</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Eletrônicos -->
+    <div class="content-panel" id="panel-3">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">📱</span>
+            <span class="badge-text">Eletrônicos (E-Lixo)</span>
+          </div>
+          <h2>Celulares, computadores e aparelhos</h2>
+          <p>Equipamentos eletrônicos contêm metais pesados e substâncias tóxicas. Nunca os descarte no lixo comum — existem pontos específicos de recebimento.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">4 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Apague todos os dados pessoais</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Retire a bateria se possível</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Inclua cabos e acessórios</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Procure lojas e programas de coleta</div>
+      </div>
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 01</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 02</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 03</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Baterias e Pilhas -->
+    <div class="content-panel" id="panel-4">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">🔋</span>
+            <span class="badge-text">Baterias e Pilhas</span>
+          </div>
+          <h2>Pilhas alcalinas, baterias e acumuladores</h2>
+          <p>Pilhas e baterias contêm metais pesados altamente tóxicos como chumbo, mercúrio e cádmio. O descarte correto é obrigação legal no Brasil.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">5 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Jamais jogue no lixo doméstico</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Guarde em local seco até descartar</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Supermercados e lojas têm coletores</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Não perfure nem queime pilhas</div>
+      </div>
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 01</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 02</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 03</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: Lâmpadas -->
+    <div class="content-panel" id="panel-5">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">💡</span>
+            <span class="badge-text">Lâmpadas Fluorescentes</span>
+          </div>
+          <h2>Lâmpadas fluorescentes, LED e especiais</h2>
+          <p>Lâmpadas fluorescentes contêm mercúrio e precisam de tratamento especializado. Mesmo quebradas, devem ir para pontos de coleta adequados.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">6 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Embale com cuidado para não quebrar</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Se quebrar, não aspire os fragmentos</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Materiais home center e magazines</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>LED e halógena vão no lixo comum</div>
+      </div>
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 01</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome do Local 02</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6: Remédios -->
+    <div class="content-panel" id="panel-6">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">💊</span>
+            <span class="badge-text">Medicamentos</span>
+          </div>
+          <h2>Remédios vencidos ou sem uso</h2>
+          <p>Medicamentos descartados incorretamente contaminam a água e o solo. O Programa Descarte Consciente recolhe em farmácias parceiras.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">7 / 8</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="panel-tips">
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Não jogue no vaso sanitário</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Mantenha na embalagem original</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Farmácias têm coletores específicos</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Inclua bulas e caixas de papelão</div>
+      </div>
+      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
+      <div class="locais-grid">
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome da Farmácia 01</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome da Farmácia 02</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+        <div class="local-card">
+          <div class="local-card-img">
+            <div class="img-placeholder"><span class="img-placeholder-icon">📷</span><span class="img-placeholder-text">Adicionar foto do local</span></div>
+            <span class="img-placeholder-tag">Ponto de Coleta</span>
+          </div>
+          <div class="local-card-body">
+            <h4>Nome da Farmácia 03</h4>
+            <div class="local-card-address"><span class="addr-icon">📌</span><span>Endereço completo, Bairro – Altinópolis, SP</span></div>
+            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>Horário de funcionamento a confirmar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7: Sólidos da Construção Civil -->
+    <div class="content-panel" id="panel-7">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">🪨</span>
+            <span class="badge-text">Resíduos Sólidos da Construção</span>
+          </div>
+          <h2>Destinação correta de resíduos da construção civil</h2>
+          <p>Entulho, terra, concreto, tijolos e restos de obras têm destinação especial definida por lei. Veja as orientações oficiais da Prefeitura de Altinópolis.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">8 / 9</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="info-banner-container">
+        <img src="banner-solidos.png" alt="Destinação Correta de Resíduos da Construção Civil – Prefeitura de Altinópolis" class="info-banner-img" />
+        <div class="info-banner-highlights">
+          <div class="info-highlight-card">
+            <span class="info-highlight-icon">🏗️</span>
+            <div>
+              <strong>Ecoponto EXPOAL</strong>
+              <span>Parque Municipal da Santa Cruz — gratuito para pequenos volumes</span>
+            </div>
+          </div>
+          <div class="info-highlight-card">
+            <span class="info-highlight-icon">🏛️</span>
+            <div>
+              <strong>Pátio da Secretaria de Obras</strong>
+              <span>R. Cel. Joaquim Alberto, 148 — entrega voluntária</span>
+            </div>
+          </div>
+          <div class="info-highlight-card">
+            <span class="info-highlight-icon">⚖️</span>
+            <div>
+              <strong>Lei Municipal nº 1728 / 2010</strong>
+              <span>O descarte irregular em vias públicas sujeita a multa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8: Lixo Volumoso -->
+    <div class="content-panel" id="panel-8">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <div class="panel-category-badge">
+            <span class="badge-icon">🛋️</span>
+            <span class="badge-text">Lixo Volumoso</span>
+          </div>
+          <h2>Coleta de resíduos volumosos agendada</h2>
+          <p>Móveis, colchões, sofás e objetos de grande volume têm coleta especial agendada pela Prefeitura de Altinópolis. Saiba como solicitar.</p>
+        </div>
+        <div class="panel-nav-btns">
+          <div class="nav-arrow" onclick="prevCat()">←</div>
+          <span class="panel-counter">9 / 9</span>
+          <div class="nav-arrow" onclick="nextCat()">→</div>
+        </div>
+      </div>
+      <div class="info-banner-container">
+        <img src="banner-volumosos.png" alt="Coleta de Resíduos Volumosos – Prefeitura de Altinópolis" class="info-banner-img" />
+        <div class="info-banner-highlights">
+          <div class="info-highlight-card">
+            <span class="info-highlight-icon">📅</span>
+            <div>
+              <strong>2× por semana</strong>
+              <span>Coleta toda terça-feira e sexta-feira mediante agendamento prévio</span>
+            </div>
+          </div>
+          <div class="info-highlight-card">
+            <span class="info-highlight-icon">📲</span>
+            <div>
+              <strong>Como solicitar</strong>
+              <span>Plataforma e-Ouve ou WhatsApp (16) 99785-4535</span>
+            </div>
+          </div>
+          <div class="info-highlight-card">
+            <span class="info-highlight-icon">🛋️</span>
+            <div>
+              <strong>O que é coletado</strong>
+              <span>Móveis, colchões, sofás, mesas, objetos de grande volume e podas de jardim</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content-panels -->
+</section>
+
+<!-- ═══ DICAS SECTION ═══ -->
+<section class="tips-section" id="dicas">
+  <div class="tips-header reveal">
+    <div class="section-tag">Conscientização</div>
+    <h2 class="section-title">Por que descartar<br>corretamente?</h2>
+    <p class="section-subtitle">O descarte inadequado causa danos ambientais e à saúde. Pequenas atitudes fazem grande diferença no futuro do nosso planeta.</p>
+  </div>
+  <div class="tips-grid">
+    <div class="tip-card reveal">
+      <div class="tip-number">01</div>
+      <div class="tip-icon">🌍</div>
+      <h3>Proteja o meio ambiente</h3>
+      <p>Materiais descartados incorretamente contaminam solo, rios e lençóis freáticos, prejudicando toda a cadeia ecológica da região.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-number">02</div>
+      <div class="tip-icon">🏥</div>
+      <h3>Saúde pública em primeiro lugar</h3>
+      <p>Resíduos como medicamentos e perfurocortantes oferecem risco direto à saúde humana quando mal descartados em lixo doméstico comum.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-number">03</div>
+      <div class="tip-icon">⚡</div>
+      <h3>Economize recursos naturais</h3>
+      <p>Materiais recicláveis podem virar novas matérias-primas, reduzindo o consumo de recursos naturais e energia na produção industrial.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-number">04</div>
+      <div class="tip-icon">🔄</div>
+      <h3>Apoie a economia circular</h3>
+      <p>Eletrônicos, baterias e lâmpadas contêm metais valiosos que podem ser recuperados e reutilizados com o descarte adequado.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-number">05</div>
+      <div class="tip-icon">⚖️</div>
+      <h3>É lei — e é seu dever</h3>
+      <p>A Política Nacional de Resíduos Sólidos estabelece obrigações para o descarte correto. Fique em dia com a legislação e evite penalidades.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-number">06</div>
+      <div class="tip-icon">🌱</div>
+      <h3>Deixe uma cidade melhor</h3>
+      <p>Cada gesto conta. Ao descartar corretamente, você colabora para uma Altinópolis mais limpa, saudável e sustentável para todos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMO FUNCIONA ═══ -->
+<section class="how-section" id="como-funciona">
+  <div class="how-header reveal">
+    <div class="section-tag">Simples assim</div>
+    <h2 class="section-title">Como usar o Me Descarta Aqui</h2>
+    <p class="section-subtitle">Em três passos você sabe exatamente onde levar cada tipo de resíduo na sua cidade.</p>
+  </div>
+  <div class="how-steps">
+    <div class="how-step reveal">
+      <div class="step-number">01</div>
+      <h3>Identifique o material</h3>
+      <p>Veja o que você precisa descartar e escolha a categoria correspondente no carrossel acima.</p>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-number">02</div>
+      <h3>Leia as dicas de preparo</h3>
+      <p>Siga as orientações de cada categoria para preparar o material corretamente antes de levar.</p>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-number">03</div>
+      <h3>Encontre o ponto mais perto</h3>
+      <p>Consulte os endereços listados e leve o material ao ponto de coleta mais conveniente para você.</p>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-number">04</div>
+      <h3>Descarte com consciência!</h3>
+      <p>Pronto! Você fez sua parte. Compartilhe o site e ajude mais pessoas a descartar corretamente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="section-tag" style="justify-content: center; margin-bottom: 20px;">Faça parte da mudança</div>
+    <h2>Altinópolis mais limpa começa com você</h2>
+    <p>Compartilhe este guia com amigos, família e vizinhos. Juntos construímos uma cidade mais sustentável e consciente.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="#descarte" class="btn-primary">🗺️ Explorar categorias</a>
+      <a href="#dicas" class="btn-secondary">💡 Ver dicas</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-logo-icon">♻️</div>
+    <div class="footer-logo-text">Me Descarta<span> Aqui</span></div>
+  </div>
+  <span class="footer-copy">© 2025 Me Descarta Aqui · Altinópolis, SP</span>
+  <div class="footer-links">
+    <a href="#dicas">Dicas</a>
+    <a href="#descarte">Pontos de Coleta</a>
+    <a href="#como-funciona">Como usar</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
