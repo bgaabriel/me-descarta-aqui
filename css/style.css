@@ -1845,3 +1845,28 @@
     .dica-nav-prev { left: -2px; }
     .dica-nav-next { right: -2px; }
   }
+
+  /* ═══ CARDS INFORMATIVOS (sem local declarado) ═══ */
+  .info-only-card {
+    border-color: rgba(200,169,110,0.15);
+    background: rgba(200,169,110,0.04);
+  }
+
+  .info-only-card:hover {
+    border-color: rgba(200,169,110,0.35);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  }
+
+  .info-img-placeholder .img-placeholder {
+    background: linear-gradient(135deg, rgba(200,169,110,0.08), rgba(13,61,43,0.4));
+  }
+
+  .info-only-card .local-card-address {
+    color: rgba(245,240,232,0.65);
+    font-size: 0.83rem;
+    line-height: 1.6;
+  }
+
+  .info-only-card .local-card-body h4 {
+    color: var(--earth);
+  }
