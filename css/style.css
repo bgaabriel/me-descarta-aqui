@@ -159,6 +159,36 @@
     backdrop-filter: blur(1px);
   }
 
+  @media (max-width: 900px) {
+    .hero-city-bg {
+      background-size: cover;
+      background-position: center center;
+    }
+    .hero-city-bg::after {
+      background:
+        linear-gradient(180deg,
+          rgba(8, 38, 24, 0.70) 0%,
+          rgba(10, 45, 28, 0.65) 50%,
+          rgba(13, 61, 43, 0.85) 100%
+        );
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-city-bg {
+      background-size: 100% auto;
+      background-position: center 30%;
+    }
+    .hero-city-bg::after {
+      background:
+        linear-gradient(180deg,
+          rgba(8, 38, 24, 0.60) 0%,
+          rgba(10, 45, 28, 0.55) 40%,
+          rgba(13, 61, 43, 0.90) 100%
+        );
+    }
+  }
+
   /* ═══ HERO ═══ */
   .hero {
     min-height: 100vh;
@@ -1188,6 +1218,7 @@
       text-align: center;
       flex-direction: column;
       align-items: center;
+      min-height: 100svh;
     }
 
     .hero-visual { display: none; }
@@ -1296,4 +1327,521 @@
     .info-banner-highlights {
       width: 100%;
     }
+  }
+
+  /* ═══ LIXO COMUM – LAYOUT BANNER + BAIRROS ═══ */
+  .lixo-comum-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* Banner */
+  .lixo-comum-banner {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(45,199,109,0.2);
+    transition: border-color 0.3s, transform 0.3s;
+    flex-shrink: 0;
+    max-width: 340px;
+    width: 100%;
+  }
+
+  .lixo-comum-banner:hover {
+    border-color: var(--green-vivid);
+    transform: translateY(-3px);
+  }
+
+  .lixo-comum-img {
+    width: 100%;
+    display: block;
+    max-height: 680px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .lixo-comum-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13,61,43,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .lixo-comum-banner:hover .lixo-comum-overlay { opacity: 1; }
+
+  /* Bairros painel */
+  .lixo-comum-bairros {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .bairros-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 20px;
+    background: rgba(45,199,109,0.08);
+    border: 1px solid rgba(45,199,109,0.2);
+    border-radius: var(--radius);
+    margin-bottom: 4px;
+  }
+
+  .bairros-header-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+
+  .bairros-header-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--cream);
+    margin-bottom: 3px;
+  }
+
+  .bairros-header-sub {
+    font-size: 0.78rem;
+    color: rgba(245,240,232,0.55);
+    font-weight: 400;
+  }
+
+  .bairro-dia {
+    border: 1px solid rgba(45,199,109,0.12);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.25s;
+  }
+
+  .bairro-dia:hover { border-color: rgba(45,199,109,0.3); }
+
+  .bairro-dia-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  .bairro-dia-header.segunda { background: rgba(34, 139, 80, 0.25); }
+  .bairro-dia-header.terca   { background: rgba(26, 107, 69, 0.35); }
+  .bairro-dia-header.quarta  { background: rgba(45,199,109, 0.15); }
+  .bairro-dia-header.quinta  { background: rgba(200,169,110, 0.15); }
+  .bairro-dia-header.rural   { background: rgba(139, 102, 52, 0.2); }
+
+  .bairro-dia-icon { font-size: 16px; }
+  .bairro-dia-label { color: var(--cream); }
+
+  .bairro-lista {
+    list-style: none;
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .bairro-lista li {
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.75);
+    background: rgba(45,199,109,0.07);
+    border: 1px solid rgba(45,199,109,0.12);
+    border-radius: 100px;
+    padding: 4px 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    transition: background 0.2s;
+  }
+
+  .bairro-lista li:hover { background: rgba(45,199,109,0.14); }
+  .bairro-lista li strong { color: var(--green-vivid); font-weight: 600; }
+
+  .bairros-footer-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(200,169,110,0.08);
+    border: 1px solid rgba(200,169,110,0.2);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.6);
+    margin-top: 4px;
+  }
+
+  /* Responsive */
+  @media (max-width: 800px) {
+    .lixo-comum-layout {
+      grid-template-columns: 1fr;
+    }
+    .lixo-comum-banner {
+      max-width: 100%;
+    }
+    .lixo-comum-img {
+      max-height: 500px;
+      object-fit: contain;
+      background: #fff;
+    }
+  }
+
+  /* ═══ MODAL LIGHTBOX ═══ */
+  .banner-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5,20,12,0.95);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(8px);
+  }
+
+  .banner-modal.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .banner-modal-img {
+    max-width: 100%;
+    max-height: 92vh;
+    border-radius: 16px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+    object-fit: contain;
+    transform: scale(0.9);
+    transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .banner-modal.open .banner-modal-img { transform: scale(1); }
+
+  .banner-modal-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--cream);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .banner-modal-close:hover { background: rgba(255,255,255,0.2); }
+
+  /* ═══ COMO DESCARTAR SECTION ═══ */
+  .como-descartar-section {
+    padding: 100px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .como-descartar-section::before {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: -120px;
+    width: 400px; height: 400px;
+    background: radial-gradient(ellipse, rgba(45,199,109,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .como-descartar-header {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+  }
+
+  /* ── Carousel wrapper ── */
+  .dica-carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .dica-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .dica-track {
+    display: flex;
+    transition: none;
+  }
+
+  /* ── Individual card ── */
+  .dica-card {
+    display: none;
+    width: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 56px;
+    padding: 48px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(45,199,109,0.12);
+    border-radius: var(--radius-lg);
+    animation: panelIn 0.5s cubic-bezier(0.16,1,0.3,1) both;
+  }
+
+  .dica-card.active {
+    display: flex;
+  }
+
+  /* ── Round image ── */
+  .dica-img-ring {
+    position: relative;
+    flex-shrink: 0;
+    width: 260px;
+    height: 260px;
+  }
+
+  .dica-img-wrap {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(45,199,109,0.35);
+    box-shadow:
+      0 0 0 8px rgba(45,199,109,0.07),
+      0 0 0 16px rgba(45,199,109,0.04),
+      0 20px 60px rgba(0,0,0,0.4);
+    position: relative;
+    background: rgba(26,107,69,0.2);
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+
+  .dica-card:hover .dica-img-wrap {
+    border-color: var(--green-vivid);
+    box-shadow:
+      0 0 0 8px rgba(45,199,109,0.12),
+      0 0 0 18px rgba(45,199,109,0.06),
+      0 24px 70px rgba(0,0,0,0.45);
+  }
+
+  .dica-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* empty placeholder ring */
+  .empty-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: default;
+  }
+
+  .dica-empty-icon {
+    font-size: 40px;
+    opacity: 0.4;
+  }
+
+  .dica-empty-text {
+    font-size: 0.72rem;
+    color: rgba(245,240,232,0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* number badge on the ring */
+  .dica-ring-label {
+    position: absolute;
+    bottom: 8px; right: 8px;
+    width: 36px; height: 36px;
+    background: var(--green-vivid);
+    color: var(--green-deep);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  /* ── Info side ── */
+  .dica-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .dica-category-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(45,199,109,0.1);
+    border: 1px solid rgba(45,199,109,0.22);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--green-vivid);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .dica-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    letter-spacing: -0.03em;
+    color: var(--cream);
+    margin-bottom: 14px;
+    line-height: 1.15;
+  }
+
+  .dica-desc {
+    font-size: 0.92rem;
+    color: rgba(245,240,232,0.65);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 24px;
+    max-width: 520px;
+  }
+
+  .dica-steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dica-steps li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.7);
+    font-weight: 400;
+  }
+
+  .step-dot {
+    width: 24px; height: 24px;
+    background: rgba(45,199,109,0.15);
+    border: 1px solid rgba(45,199,109,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--green-vivid);
+    flex-shrink: 0;
+  }
+
+  /* ── Nav arrows ── */
+  .dica-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px; height: 48px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(45,199,109,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--cream);
+    transition: all 0.2s;
+    z-index: 10;
+    /* sit outside the card */
+  }
+
+  .dica-nav-prev { left: -28px; }
+  .dica-nav-next { right: -28px; }
+
+  .dica-nav:hover {
+    background: rgba(45,199,109,0.15);
+    border-color: var(--green-vivid);
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  /* ── Dots ── */
+  .dica-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+  }
+
+  .dica-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(245,240,232,0.2);
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s, width 0.25s;
+    border-radius: 100px;
+  }
+
+  .dica-dot.active {
+    background: var(--green-vivid);
+    transform: scale(1.2);
+    width: 24px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .como-descartar-section { padding: 64px 24px; }
+
+    .dica-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 32px 24px;
+      gap: 32px;
+    }
+
+    .dica-img-ring {
+      width: 200px;
+      height: 200px;
+    }
+
+    .dica-img-wrap {
+      width: 200px;
+      height: 200px;
+    }
+
+    .dica-desc { max-width: 100%; }
+
+    .dica-steps li { justify-content: center; }
+
+    .dica-nav-prev { left: -4px; }
+    .dica-nav-next { right: -4px; }
+
+    .dica-category-tag { margin: 0 auto 16px; }
+  }
+
+  @media (max-width: 600px) {
+    .dica-img-ring { width: 160px; height: 160px; }
+    .dica-img-wrap { width: 160px; height: 160px; }
+    .dica-nav { width: 38px; height: 38px; font-size: 15px; }
+    .dica-nav-prev { left: -2px; }
+    .dica-nav-next { right: -2px; }
   }

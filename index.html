@@ -14,7 +14,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
   <a href="#dicas" onclick="closeMobileMenu()">Dicas</a>
-  <a href="#como-funciona" onclick="closeMobileMenu()">Como Descartar</a>
+  <a href="#como-descartar" onclick="closeMobileMenu()">Como Descartar</a>
   <a href="#descarte" onclick="closeMobileMenu()" style="color:var(--green-vivid)">Encontrar Local</a>
 </div>
 
@@ -27,7 +27,7 @@
   <ul class="nav-links">
     <li><a href="#dicas">Dicas</a></li>
     <li><a href="#descarte">Descarte</a></li>
-    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#como-descartar">Como Descartar</a></li>
     <li><a href="#descarte" class="nav-cta">Encontrar Local</a></li>
   </ul>
   <div class="hamburger" onclick="openMobileMenu()">
@@ -344,32 +344,115 @@
         </div>
         <div class="panel-nav-btns">
           <div class="nav-arrow" onclick="prevCat()">←</div>
-          <span class="panel-counter">3 / 8</span>
+          <span class="panel-counter">3 / 9</span>
           <div class="nav-arrow" onclick="nextCat()">→</div>
         </div>
       </div>
+
       <div class="panel-tips">
         <div class="panel-tip-chip"><div class="chip-dot"></div>Use sacos plásticos resistentes</div>
         <div class="panel-tip-chip"><div class="chip-dot"></div>Separe orgânicos de rejeitos secos</div>
-        <div class="panel-tip-chip"><div class="chip-dot"></div>Descarte nos dias de coleta</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Descarte nos dias de coleta do seu bairro</div>
         <div class="panel-tip-chip"><div class="chip-dot"></div>Não misture com recicláveis</div>
+        <div class="panel-tip-chip"><div class="chip-dot"></div>Coloque na calçada a partir das 7h da manhã</div>
       </div>
-      <p class="locais-title">📍 Pontos de coleta em Altinópolis</p>
-      <div class="locais-grid">
-        <div class="local-card">
-          <div class="local-card-img">
-            <div class="img-placeholder">
-              <img src="BannerHorarios.jpeg" alt="Horarios">
-            </div>
-            <span class="img-placeholder-tag">Coleta Municipal</span>
-          </div>
-          <div class="local-card-body">
-            <h4>Coleta Domiciliar Municipal</h4>
-            <div class="local-card-address"><span class="addr-icon">📌</span><span>Consultar calendário de coleta por bairro na Prefeitura de Altinópolis</span></div>
-            <div class="local-card-hours"><span class="hours-icon">🕐</span><span>A partir das 7:00</span></div>
+
+      <!-- Layout banner + bairros lado a lado -->
+      <p class="locais-title">📅 Cronograma de coleta seletiva – ASCALT</p>
+      <div class="lixo-comum-layout">
+
+        <!-- Banner -->
+        <div class="lixo-comum-banner" onclick="openBannerModal('BannerHorarios.jpeg')">
+          <img src="BannerHorarios.jpeg" alt="Cronograma de Coleta Seletiva ASCALT – Altinópolis" class="lixo-comum-img" />
+          <div class="lixo-comum-overlay">
+            <span class="info-banner-zoom">🔍 Ver em tela cheia</span>
           </div>
         </div>
-      </div>
+
+        <!-- Bairros por dia -->
+        <div class="lixo-comum-bairros">
+          <div class="bairros-header">
+            <span class="bairros-header-icon">📋</span>
+            <div>
+              <p class="bairros-header-title">Cronograma por bairro</p>
+              <p class="bairros-header-sub">A partir de Segunda-feira 26/05 · Coleta a partir das 7h</p>
+            </div>
+          </div>
+
+          <div class="bairro-dia">
+            <div class="bairro-dia-header segunda">
+              <span class="bairro-dia-icon">♻️</span>
+              <span class="bairro-dia-label">Segunda-feira</span>
+            </div>
+            <ul class="bairro-lista">
+              <li>Figueiredo Walter</li>
+              <li>Ulisses Guimarães</li>
+              <li>Edmar Vicentini</li>
+              <li>Vila Barroso</li>
+              <li>Morada Gabriela</li>
+              <li>Thomas Alkmin</li>
+              <li>Armando Vicentini</li>
+            </ul>
+          </div>
+
+          <div class="bairro-dia">
+            <div class="bairro-dia-header terca">
+              <span class="bairro-dia-icon">♻️</span>
+              <span class="bairro-dia-label">Terça-feira</span>
+            </div>
+            <ul class="bairro-lista">
+              <li>Vila Maria (e bairros adjacentes)</li>
+              <li>COHAB</li>
+              <li>Jardim Luiza</li>
+              <li>Vila Toscana</li>
+              <li>Figueiredo Fellipe</li>
+              <li>Figueiredo Bombarda</li>
+            </ul>
+          </div>
+
+          <div class="bairro-dia">
+            <div class="bairro-dia-header quarta">
+              <span class="bairro-dia-icon">♻️</span>
+              <span class="bairro-dia-label">Quarta-feira</span>
+            </div>
+            <ul class="bairro-lista">
+              <li>Centro</li>
+              <li>Salim Calil (Jetirana)</li>
+              <li>CECAP</li>
+              <li>Parque do Café</li>
+              <li>Jardim Helena</li>
+              <li>Nova Altinópolis</li>
+            </ul>
+          </div>
+
+          <div class="bairro-dia">
+            <div class="bairro-dia-header quinta">
+              <span class="bairro-dia-icon">🏪</span>
+              <span class="bairro-dia-label">Quinta e Sexta-feira</span>
+            </div>
+            <ul class="bairro-lista">
+              <li>Coleta nos comércios</li>
+            </ul>
+          </div>
+
+          <div class="bairro-dia">
+            <div class="bairro-dia-header rural">
+              <span class="bairro-dia-icon">🏡</span>
+              <span class="bairro-dia-label">Zona Rural</span>
+            </div>
+            <ul class="bairro-lista">
+              <li>Atendimento mediante agendamento</li>
+              <li><strong>📞 (16) 98271-0785</strong></li>
+            </ul>
+          </div>
+
+          <div class="bairros-footer-note">
+            <span>⚠️</span>
+            <span>Coloque os recicláveis na calçada no dia correto para seu bairro</span>
+          </div>
+        </div>
+
+      </div><!-- /lixo-comum-layout -->
     </div>
 
     <!-- 3: Eletrônicos -->
@@ -768,6 +851,132 @@
 
 
 
+<!-- ═══ COMO DESCARTAR ═══ -->
+<section class="como-descartar-section" id="como-descartar">
+  <div class="como-descartar-header reveal">
+    <div class="section-tag">Passo a passo</div>
+    <h2 class="section-title">Como descartar<br>na prática</h2>
+    <p class="section-subtitle">Veja exemplos reais de como preparar e acondicionar corretamente cada tipo de resíduo antes de levar ao ponto de coleta.</p>
+  </div>
+
+  <!-- Dicas carrossel -->
+  <div class="dica-carousel reveal">
+
+    <!-- Nav esquerda -->
+    <button class="dica-nav dica-nav-prev" onclick="dicaPrev()" aria-label="Anterior">&#8592;</button>
+
+    <!-- Track -->
+    <div class="dica-track-wrapper">
+      <div class="dica-track" id="dicaTrack">
+
+        <!-- Dica 0 -->
+        <div class="dica-card active" id="dica-0">
+          <div class="dica-img-ring">
+            <div class="dica-img-wrap">
+              <img src="garrafaSeringas.jpeg" alt="Garrafa com seringas descartadas corretamente" />
+            </div>
+            <div class="dica-ring-label">01</div>
+          </div>
+          <div class="dica-info">
+            <div class="dica-category-tag">
+              <span>🩸</span> Perfurocortantes
+            </div>
+            <h3 class="dica-title">Use garrafa pet ou de amaciante</h3>
+            <p class="dica-desc">Coloque agulhas, seringas e outros perfurocortantes dentro de uma garrafa pet ou de amaciante com tampa. Quando cheia, leve ao ponto de coleta mais próximo — farmácias, UBSs ou hospital.</p>
+            <ul class="dica-steps">
+              <li><span class="step-dot">1</span> Escolha uma garrafa resistente com tampa de rosca</li>
+              <li><span class="step-dot">2</span> Insira os perfurocortantes com cuidado, sem apertar</li>
+              <li><span class="step-dot">3</span> Feche bem a tampa e leve ao ponto de coleta</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Dica 1 — placeholder para próxima foto -->
+        <div class="dica-card" id="dica-1">
+          <div class="dica-img-ring empty">
+            <div class="dica-img-wrap empty-wrap">
+              <span class="dica-empty-icon">📷</span>
+              <span class="dica-empty-text">Adicionar foto</span>
+            </div>
+            <div class="dica-ring-label">02</div>
+          </div>
+          <div class="dica-info">
+            <div class="dica-category-tag">
+              <span>♻️</span> Recicláveis
+            </div>
+            <h3 class="dica-title">Limpe e separe por material</h3>
+            <p class="dica-desc">Antes de descartar materiais recicláveis, lave embalagens e separe por tipo: plástico, papel, vidro e metal. Materiais limpos têm maior aproveitamento na reciclagem.</p>
+            <ul class="dica-steps">
+              <li><span class="step-dot">1</span> Lave e seque as embalagens</li>
+              <li><span class="step-dot">2</span> Separe por tipo de material</li>
+              <li><span class="step-dot">3</span> Leve no dia da coleta do seu bairro</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Dica 2 — placeholder -->
+        <div class="dica-card" id="dica-2">
+          <div class="dica-img-ring empty">
+            <div class="dica-img-wrap empty-wrap">
+              <span class="dica-empty-icon">📷</span>
+              <span class="dica-empty-text">Adicionar foto</span>
+            </div>
+            <div class="dica-ring-label">03</div>
+          </div>
+          <div class="dica-info">
+            <div class="dica-category-tag">
+              <span>💊</span> Remédios
+            </div>
+            <h3 class="dica-title">Mantenha na embalagem original</h3>
+            <p class="dica-desc">Remédios vencidos ou sem uso devem ser mantidos na caixa e bula originais. Leve diretamente a uma farmácia parceira — nunca descarte no vaso sanitário ou lixo comum.</p>
+            <ul class="dica-steps">
+              <li><span class="step-dot">1</span> Guarde na embalagem original com bula</li>
+              <li><span class="step-dot">2</span> Não misture com outros resíduos</li>
+              <li><span class="step-dot">3</span> Entregue em qualquer farmácia da cidade</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Dica 3 — placeholder -->
+        <div class="dica-card" id="dica-3">
+          <div class="dica-img-ring empty">
+            <div class="dica-img-wrap empty-wrap">
+              <span class="dica-empty-icon">📷</span>
+              <span class="dica-empty-text">Adicionar foto</span>
+            </div>
+            <div class="dica-ring-label">04</div>
+          </div>
+          <div class="dica-info">
+            <div class="dica-category-tag">
+              <span>🔋</span> Baterias e Pilhas
+            </div>
+            <h3 class="dica-title">Guarde em local seco até o descarte</h3>
+            <p class="dica-desc">Baterias e pilhas usadas devem ser guardadas em local seco, longe de crianças, até que você tenha quantidade suficiente para levar a um ponto de coleta — supermercados, lojas e a Casa da Agricultura aceitam.</p>
+            <ul class="dica-steps">
+              <li><span class="step-dot">1</span> Guarde em potinho ou saco fechado</li>
+              <li><span class="step-dot">2</span> Nunca jogue no lixo doméstico</li>
+              <li><span class="step-dot">3</span> Leve ao coletor mais próximo</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /dica-track -->
+    </div>
+
+    <!-- Nav direita -->
+    <button class="dica-nav dica-nav-next" onclick="dicaNext()" aria-label="Próxima">&#8594;</button>
+
+    <!-- Dots -->
+    <div class="dica-dots">
+      <span class="dica-dot active" onclick="goToDica(0)"></span>
+      <span class="dica-dot" onclick="goToDica(1)"></span>
+      <span class="dica-dot" onclick="goToDica(2)"></span>
+      <span class="dica-dot" onclick="goToDica(3)"></span>
+    </div>
+
+  </div><!-- /dica-carousel -->
+</section>
+
 <!-- ═══ CTA ═══ -->
 <section class="cta-section">
   <div class="cta-inner reveal">
@@ -791,9 +1000,16 @@
   <div class="footer-links">
     <a href="#dicas">Dicas</a>
     <a href="#descarte">Pontos de Coleta</a>
-    <a href="#como-funciona">Como usar</a>
+    <a href="#como-descartar">Como Descartar</a>
   </div>
 </footer>
+
+
+<!-- Modal lightbox -->
+<div class="banner-modal" id="bannerModal" onclick="closeBannerModal()">
+  <div class="banner-modal-close" onclick="closeBannerModal()">✕</div>
+  <img src="" id="bannerModalImg" alt="Banner informativo" class="banner-modal-img" onclick="event.stopPropagation()" />
+</div>
 
 <script src="js/main.js"></script>
 
